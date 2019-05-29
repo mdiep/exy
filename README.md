@@ -15,7 +15,7 @@ Xcode’s build system has a few building blocks:
 - _project_: a collection of _targets_ and _schemes_
 - _workspace_: a collection of _projects_ and _schemes_
 
-These can be configured in a number of ways. But one arrangement is particularly powerful: a workspace of interdependent projects. By building through a workspace, you can choose between building targets altogether or building them individually.
+These can be configured in a number of ways. But one arrangement is particularly powerful: a workspace of interdependent projects. By building through a workspace, you can choose between building all targets at once or building them individually.
 
 `exy` uses `xcodebuild` to build the projects in a workspace individually, making the products available to the projects that depend on them. But it caches products to avoid recompiling unchanged targets. This enables fast, reliable builds on CI—most of the speed of dirty builds with the reliability of clean builds.
 
@@ -65,7 +65,7 @@ ExampleApp:
 
 Use this to split your CI into multiple jobs.
 
-You may need to create your build config before the CI job begins for your branch. If that’s the case, you should write add a test to CI that verifies that this config is up to date.
+You may need to create your build config before the CI job begins for your branch. If that’s the case, you should add a test to CI that verifies that this config is up to date.
 
 #### 2. Restore a Cached Version
 The speedups come from using cached products for some or all of the schemes. Use `exy key <workspace> <scheme>` to calculate a cache key that can be used to locate built products for a given scheme.
