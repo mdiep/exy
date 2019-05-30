@@ -8,6 +8,7 @@ let package = Package(
         .executable(name: "exy", targets: ["exy"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/tuist/xcodeproj", from: "6.7.0"),
     ],
     targets: [
         .target(
@@ -16,7 +17,7 @@ let package = Package(
         ),
         .target(
             name: "ExyLib",
-            dependencies: []
+            dependencies: ["xcodeproj"]
         ),
         .testTarget(
             name: "ExyTests",
