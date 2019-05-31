@@ -17,11 +17,19 @@ let package = Package(
         ),
         .target(
             name: "ExyLib",
-            dependencies: ["xcodeproj"]
+            dependencies: ["ExyWorkspace"]
         ),
         .testTarget(
             name: "ExyTests",
             dependencies: ["ExyLib"]
         ),
+        .target(
+            name: "ExyWorkspace",
+            dependencies: ["xcodeproj"]
+        ),
+        .testTarget(
+            name: "ExyWorkspaceTests",
+            dependencies: ["ExyWorkspace"]
+        )
     ]
 )

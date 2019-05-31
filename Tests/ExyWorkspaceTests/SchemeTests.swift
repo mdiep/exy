@@ -1,4 +1,4 @@
-import ExyLib
+import ExyWorkspace
 import XCTest
 
 final class SchemeLessThanTests: XCTestCase {
