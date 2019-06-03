@@ -1,4 +1,5 @@
 import ExyLib
+import ExyWorkspace
 import XCTest
 
 extension Scheme {
