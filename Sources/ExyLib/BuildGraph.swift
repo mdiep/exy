@@ -1,3 +1,5 @@
+import ExyWorkspace
+
 /// The graph of dependencies that need to be built.
 ///
 /// This is the output of `exy graph`.
