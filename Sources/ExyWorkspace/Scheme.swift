@@ -20,3 +20,14 @@ extension Scheme: Comparable {
   }
 }
 
+extension Scheme {
+  /// Information about a scheme.
+  public struct Info: Hashable {
+    /// The scheme that this information describes.
+    public var scheme: Scheme
+
+    /// The targets that are built as part of this scheme.
+    public var targets: Set<Target>
+  }
+}
+
