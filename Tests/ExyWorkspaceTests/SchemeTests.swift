@@ -6,6 +6,8 @@ final class SchemeLessThanTests: XCTestCase {
     let a = Scheme(name: "A", url: URL(fileURLWithPath: "/B"))
     let b = Scheme(name: "B", url: URL(fileURLWithPath: "/A"))
 
+	print("\(Fixtures.reactiveCocoa.url)")
+
     XCTAssertLessThan(a, b)
     XCTAssertGreaterThan(b, a)
   }
