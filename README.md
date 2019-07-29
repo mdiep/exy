@@ -6,6 +6,8 @@ exy test --cache /path/to/cache MyApp.xcodeworkspace MyScheme \
   | xcpretty
 ```
 
+# This project is just a README at this point. The functionality described here is aspirational.
+
 ## Overview
 Xcode’s build system has a few building blocks:
 
